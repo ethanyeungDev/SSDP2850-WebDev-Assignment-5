@@ -1,6 +1,6 @@
 .header-inner {
   display: flex;
-  background-color: var(--color-neutral-600);
+  background-color: var(--color-alt2);
   height: 2rem;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .nav-bar {
-  background-color: var(--color-neutral-400);
+  background-color: var(--color-alt);
   display: flex;
   flex-direction: column;
 }
@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  background-color: var(--color-neutral-400);
+  background-color: var(--color-alt);
 }
 
 .nav-bar__title {
@@ -31,7 +31,7 @@
   font-weight: bold;
   margin-bottom: 0;
   margin-top: 0.5rem;
-  color: var(--color-indigo-50);
+  color: var(--color-text);
 }
 
 .nav-bar__track {
@@ -49,6 +49,7 @@
   padding-bottom: 0;
   gap: .35rem;
 }
+
 .nav-bar__item {
   list-style: none;
 }
@@ -58,7 +59,7 @@
   color: var(--color-indigo-50);
 }
 
-.nav-bar__item :visited {
+.nav-bar__item:visited {
   color: var(--color-indigo-50);
 }
 

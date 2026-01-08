@@ -22,6 +22,8 @@ body {
   grid-template-rows: auto 1fr auto;
 
   min-height: 100vh;
+
+  background: var(--chrome-bg);
 }
 
 header {
@@ -30,6 +32,7 @@ header {
 
 main {
   grid-area: main;
+  background: var(--page-bg);
 }
 
 footer {
