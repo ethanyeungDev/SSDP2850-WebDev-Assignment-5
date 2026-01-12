@@ -1,0 +1,20 @@
+{
+  "name": "ssd2850-a04",
+  "version": "1.0.0",
+  "description": "* Ethan * Pawel * Poul",
+  "homepage": "https://github.com/uFloppyDisk/ssd2850-a04#readme",
+  "bugs": {
+    "url": "https://github.com/uFloppyDisk/ssd2850-a04/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uFloppyDisk/ssd2850-a04.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
