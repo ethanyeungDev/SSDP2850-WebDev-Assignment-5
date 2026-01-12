@@ -27,7 +27,7 @@ body {
 
   min-height: 100vh;
 
-  background: var(--chrome-bg);
+  background: var(--color-chrome-bg);
 }
 
 header,
@@ -38,7 +38,7 @@ footer {
 
 header,
 footer {
-  background: var(--color-alt);
+  background: var(--color-chrome-bg);
 }
 
 header {
@@ -47,7 +47,7 @@ header {
 
 main {
   grid-area: main;
-  background: var(--page-bg);
+  background: var(--color-page-bg);
 }
 
 footer {
@@ -55,9 +55,5 @@ footer {
 }
 
 a {
-  color: var(--color-primary-800);
-}
-
-a:visited {
-  color: var(--color-primary-900);
+  color: var(--black);
 }
