@@ -1,6 +1,8 @@
 /* Base Classifieds */
 .classified {
-  --classified-width: 750px;
+  --classified-max-width: 750px;
+
+  --classified-width: clamp(0px, 100%, var(--classified-max-width));
   --classified-height: 200px;
 
   position: relative;
@@ -106,7 +108,7 @@
 /* Horizontal (default) */
 .classified {
   flex-direction: row;
-  max-width: var(--classified-width);
+  width: var(--classified-width);
   height: var(--classified-height);
 }
 
