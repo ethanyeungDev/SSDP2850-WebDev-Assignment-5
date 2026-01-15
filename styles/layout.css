@@ -1,5 +1,21 @@
+.main__content {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+
+/* Helpers */
+.aside--extras {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.5rem;
+}
+
+/* Column Layouts */
 .main--two-column {
-  --main--two-column-padding: 0.5rem;
+  --main--two-column-padding: 1rem;
 }
 
 .main--two-column > :not(:first-child) {
@@ -14,7 +30,7 @@
   }
 
   .main--two-column > :not(:first-child) {
-    display: unset;
+    display: inherit;
   }
 
   .main--two-column > :first-child {
