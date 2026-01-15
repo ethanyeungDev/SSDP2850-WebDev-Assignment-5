@@ -1,21 +1,21 @@
 .article-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-heading__title {
-    margin-top: 1.5rem;
+  margin-top: 0;
 }
 
 @media (min-width: 64em) {
-    .article-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-    }
+  .article-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 
-    .article-list {
-        margin-top: 0px;
-        margin-left: 0px;
-    }
+  .article-list {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
 }
