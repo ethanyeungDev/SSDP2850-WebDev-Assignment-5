@@ -1,15 +1,19 @@
 /* add something to force the top ticker to be sticky at the top. */
 .topTicker-container {
-  width: 100%; /* Or a specific width */
-  overflow: hidden; /* Hides content outside the container */
-  white-space: nowrap; /* Prevents text from wrapping */
   position: relative; /* Needed for positioning child elements */
+
+  width: 100%; /* Or a specific width */
   height: 1.4rem; /* Or desired height */
+
+  background: var(--secondary-100);
+
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; /* Hides content outside the container */
 }
 
 /* instead of a modern stock ticker it would be nice to have the text appear character by character like a typewriter */
 
-.topTicker-content{
+.topTicker-content {
   display: inline-block; /* Allows content to be treated as a single line */
   position: absolute; /* Positions content relative to the container */
   animation: scroll-left 30s linear infinite; /* Animation properties */
@@ -22,18 +26,31 @@
 }
 
 @keyframes scroll-left {
-  0% { transform: translateX(100%); } /* Starts off-screen to the right */
-  100% { transform: translateX(-100%); } /* Moves completely off-screen to the left */
+  0% {
+    transform: translateX(100%);
+  } /* Starts off-screen to the right */
+  100% {
+    transform: translateX(-100%);
+  } /* Moves completely off-screen to the left */
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--f_amber) }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--f_amber);
+  }
 }
