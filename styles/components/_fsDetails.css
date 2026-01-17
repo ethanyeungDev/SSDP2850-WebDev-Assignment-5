@@ -9,10 +9,16 @@
   --width: clamp(0, 100vw, var(--page-max-width));
   --padding: 1rem;
 
+  --details-gutter: clamp(
+    var(--base-inset),
+    calc((100vw - var(--page-max-width)) / 2),
+    100vw
+  );
+
   position: fixed;
   inset: var(--base-inset);
-
-  min-width: var(--width);
+  left: var(--details-gutter);
+  right: var(--details-gutter);
 
   margin: auto 0;
   padding: var(--padding);
