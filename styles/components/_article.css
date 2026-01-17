@@ -183,3 +183,120 @@ summary::-webkit-details-marker {
     font-size: 1.7rem;
   }
 }
+
+/* =========================
+   ARTICLE PROSE
+   ========================= */
+
+/* Article Container */
+.article__prose {
+  max-width: 800px;
+
+  margin: 0 auto 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Category Tags */
+.article__prose .tag {
+  display: inline-block;
+
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+
+  font-size: 0.875rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.article__prose .tag-tech {
+  color: var(--secondary-800);
+  background-color: var(--secondary-100);
+}
+
+.article__prose .tag-politics {
+  color: var(--delta-800);
+  background-color: var(--delta-100);
+}
+
+.article__prose .tag-breaking {
+  color: var(--gamma-800);
+  background-color: var(--gamma-100);
+}
+
+/* Typography */
+.article__prose .title {
+  margin: 0;
+  margin-bottom: 0.5rem;
+
+  color: var(--neutral-900);
+
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.article__prose .byline {
+  color: var(--neutral-500);
+  font-style: italic;
+  border-bottom: 1px solid var(--neutral-200);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.article__prose .lead-text {
+  font-size: 1.25rem;
+  color: var(--neutral-800);
+  font-weight: 500;
+}
+
+/* Blockquote */
+.article__prose blockquote {
+  border-left: 5px solid var(--primary-500);
+  background-color: var(--primary-50);
+  margin: 2rem 0;
+  padding: 1.5rem;
+  color: var(--primary-900);
+  font-size: 1.2rem;
+}
+
+.article__prose a {
+  color: var(--secondary-600);
+}
+
+/* Sidebar / Card Elements */
+.article__prose .callout {
+  background-color: var(--beta-50);
+  border: 1px solid var(--beta-200);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 3rem;
+}
+
+.article__prose .callout__heading {
+  margin: 0;
+
+  color: var(--beta-700);
+
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.article__prose .callout__body {
+  color: var(--beta-800);
+}
+
+.article__prose .btn-primary {
+  background-color: var(--primary-600);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.article__prose .btn-primary:hover {
+  background-color: var(--primary-700);
+}
