@@ -2,7 +2,7 @@
 .topTicker-container {
   position: relative; /* Needed for positioning child elements */
 
-  width: 100%; /* Or a specific width */
+  width: 100vw; /* Or a specific width */
   height: 1.4rem; /* Or desired height */
 
   background: var(--secondary-100);
@@ -14,10 +14,13 @@
 /* instead of a modern stock ticker it would be nice to have the text appear character by character like a typewriter */
 
 .topTicker-content {
-  display: inline-block; /* Allows content to be treated as a single line */
-  position: absolute; /* Positions content relative to the container */
-  animation: scroll-left 30s linear infinite; /* Animation properties */
+  position: absolute;
+  left: 0;                 /* anchor point */
+  white-space: nowrap;     /* prevent wrapping */
+  display: inline-flex;    /* keep <p> elements inline */
+  animation: scroll-left 30s linear infinite;
 }
+
 
 .topTicker-content p {
   display: inline-block; /* Ensures paragraphs stay in line */
@@ -26,12 +29,12 @@
 }
 
 @keyframes scroll-left {
-  0% {
-    transform: translateX(100%);
-  } /* Starts off-screen to the right */
-  100% {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
     transform: translateX(-100%);
-  } /* Moves completely off-screen to the left */
+  }
 }
 
 /* The typing effect */
