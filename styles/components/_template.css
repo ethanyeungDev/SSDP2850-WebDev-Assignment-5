@@ -35,6 +35,8 @@
   flex-wrap: wrap;
 
   gap: 0.5rem;
+
+  height: min-content;
 }
 
 .article-list > * {
