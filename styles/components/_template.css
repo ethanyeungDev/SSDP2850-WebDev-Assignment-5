@@ -5,6 +5,12 @@
   gap: 0.5rem;
 }
 
+.article-group:nth-child(even of .article-group)
+  .article-container
+  > :first-child {
+  order: 2;
+}
+
 .article-group__heading {
   width: 100%;
 
