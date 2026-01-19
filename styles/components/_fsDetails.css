@@ -66,19 +66,6 @@
   z-index: -20;
 }
 
-.details-fs__title {
-  --title-size: 1.75rem;
-
-  position: absolute;
-  top: var(--padding);
-
-  min-height: var(--close-button-height);
-  margin: 0;
-
-  font-size: var(--title-size);
-  font-weight: bold;
-}
-
 .details-fs[open] > summary {
   position: absolute;
   top: var(--padding);
