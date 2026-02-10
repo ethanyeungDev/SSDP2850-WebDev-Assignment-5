@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your Sass starts here */
+
+$brand-color: #ff0066;
+
+body {
+  background: $brand-color;
+}
