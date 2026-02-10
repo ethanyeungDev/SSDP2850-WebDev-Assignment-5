@@ -1,0 +1,59 @@
+/* add something to force the top ticker to be sticky at the top. */
+.topTicker-container {
+  position: relative; /* Needed for positioning child elements */
+
+  width: 100vw; /* Or a specific width */
+  height: 1.4rem; /* Or desired height */
+
+  background: var(--secondary-100);
+
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; /* Hides content outside the container */
+}
+
+/* instead of a modern stock ticker it would be nice to have the text appear character by character like a typewriter */
+
+.topTicker-content {
+  position: absolute;
+  left: 0;                 /* anchor point */
+  white-space: nowrap;     /* prevent wrapping */
+  display: inline-flex;    /* keep <p> elements inline */
+  animation: scroll-left 30s linear infinite;
+}
+
+
+.topTicker-content p {
+  display: inline-block; /* Ensures paragraphs stay in line */
+  margin: 0; /* Remove default paragraph margins */
+  padding-right: 20px; /* Adjust spacing between repeated text */
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--f_amber);
+  }
+}
