@@ -1,11 +1,82 @@
+/**
+ * =====================================================================
+ * MAIN STYLESHEET - TAILWIND + SASS INTEGRATION
+ * =====================================================================
+ * 
+ * ARCHITECTURE OVERVIEW:
+ * This stylesheet combines Tailwind CSS with custom Sass for optimal
+ * separation of concerns:
+ * 
+ * TAILWIND USAGE:
+ * - Layout (grid, flex, responsive)
+ * - Spacing & typography
+ * - Component patterns
+ * - Responsive utilities
+ * 
+ * SASS USAGE (Custom architecture):
+ * - Base styling & variables (colors, spacing, typography)
+ * - Complex backgrounds for project cards & hero sections
+ * - Advanced Sass features: mixins, extends, placeholders, nesting
+ * - Animations for gradient shifts
+ * 
+ * SASS FEATURES DEMONSTRATED:
+ * 1. Variables (@import './base/_variables.scss')
+ *    - Color palette variables
+ *    - Spacing scale variables
+ *    - Typography & breakpoint variables
+ * 
+ * 2. Mixins (@import './base/_mixins.scss')
+ *    - @mixin gradient-background: Linear gradients for cards
+ *    - @mixin animated-gradient-bg: Animated gradients for hero sections
+ *    - @mixin card-base: Reusable card styling
+ *    - @mixin responsive-padding: Responsive spacing
+ * 
+ * 3. Placeholders (@import './base/_cards-and-heros.scss')
+ *    - %card-base-styles: Base card styling with @extend
+ *    - %hero-background: Hero section base styles
+ * 
+ * 4. Nesting
+ *    - BEM-style naming with nesting (&)
+ *    - Logical hierarchy of selectors
+ *    - Example: .project-card & its nested children
+ * 
+ * IMPORT ORDER:
+ * 1. Tailwind directives (base, components, utilities)
+ * 2. Base styles + variables (global setup)
+ * 3. Sass mixins (reusable @mixin declarations)
+ * 4. Custom components (cards, heros) using Sass features
+ * 5. Component-specific styles
+ * =====================================================================
+ */
+
+// Tailwind CSS - provides layout, spacing, responsive utilities
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Your Sass starts here */
+// Custom Sass Foundation
+// Includes variables, base styles, and CSS custom properties
+@import './base';
 
-$brand-color: #ff0066;
+// Sass Mixins & Animations
+// Reusable @mixin declarations and placeholder selectors
+@import './base/mixins';
 
-body {
-  background: $brand-color;
-}
+// Project Cards & Hero Sections - Sass Focus
+// Demonstrates: nesting, extends, mixins, variables, animations
+@import './base/cards-and-heros';
+
+// Existing Component Styles
+// Converted from CSS to SCSS for consistency
+@import './components/article';
+@import './components/classified';
+@import './components/footer';
+@import './components/fsDetails';
+@import './components/header';
+@import './components/popupAds';
+@import './components/template';
+@import './components/tickertape';
+@import './components/timeCube';
+
+
+

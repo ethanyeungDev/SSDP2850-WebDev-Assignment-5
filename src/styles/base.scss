@@ -1,0 +1,180 @@
+// =============================================
+// BASE STYLES
+// =============================================
+
+@import './variables';
+
+// Color definitions as CSS custom properties for compatibility
+:root {
+  /* Colour Contexts */
+  --color-page-bg: var(--white);
+  --color-alt: var(--neutral-100);
+  --color-text: var(--black);
+  --color-chrome-bg: var(--color-alt);
+
+  /* Palette */
+  --white: #{$color-white};
+  --black: #{$color-black};
+
+  --primary-50: #{$color-primary-50};
+  --primary-100: #{$color-primary-100};
+  --primary-200: #{$color-primary-200};
+  --primary-300: #{$color-primary-300};
+  --primary-400: #{$color-primary-400};
+  --primary-500: #{$color-primary-500};
+  --primary-600: #{$color-primary-600};
+  --primary-700: #{$color-primary-700};
+  --primary-800: #{$color-primary-800};
+  --primary-900: #{$color-primary-900};
+
+  --secondary-50: #{$color-secondary-50};
+  --secondary-100: #{$color-secondary-100};
+  --secondary-200: #{$color-secondary-200};
+  --secondary-300: #{$color-secondary-300};
+  --secondary-400: #{$color-secondary-400};
+  --secondary-500: #{$color-secondary-500};
+  --secondary-600: #{$color-secondary-600};
+  --secondary-700: #{$color-secondary-700};
+  --secondary-800: #{$color-secondary-800};
+  --secondary-900: #{$color-secondary-900};
+
+  /* Neutrals */
+  --neutral-50: #{$color-neutral-50};
+  --neutral-100: #{$color-neutral-100};
+  --neutral-200: #{$color-neutral-200};
+  --neutral-300: #{$color-neutral-300};
+  --neutral-400: #{$color-neutral-400};
+  --neutral-500: #{$color-neutral-500};
+  --neutral-600: #{$color-neutral-600};
+  --neutral-700: #{$color-neutral-700};
+  --neutral-800: #{$color-neutral-800};
+  --neutral-900: #{$color-neutral-900};
+
+  /* Supporting */
+  --alpha-50: #{$color-secondary-50};
+  --alpha-100: #{$color-secondary-100};
+  --alpha-200: #{$color-secondary-200};
+  --alpha-300: #{$color-secondary-300};
+  --alpha-400: #{$color-secondary-400};
+  --alpha-500: #{$color-secondary-500};
+  --alpha-600: #{$color-secondary-600};
+  --alpha-700: #{$color-secondary-700};
+  --alpha-800: #{$color-secondary-800};
+  --alpha-900: #{$color-secondary-900};
+
+  --beta-50: #{$color-beta-50};
+  --beta-100: #{$color-beta-100};
+  --beta-200: #{$color-beta-200};
+  --beta-300: #{$color-beta-300};
+  --beta-400: #{$color-beta-400};
+  --beta-500: #{$color-beta-500};
+  --beta-600: #{$color-beta-600};
+  --beta-700: #{$color-beta-700};
+  --beta-800: #{$color-beta-800};
+  --beta-900: #{$color-beta-900};
+
+  --gamma-50: #{$color-gamma-50};
+  --gamma-100: #{$color-gamma-100};
+  --gamma-200: #{$color-gamma-200};
+  --gamma-300: #{$color-gamma-300};
+  --gamma-400: #{$color-gamma-400};
+  --gamma-500: #{$color-gamma-500};
+  --gamma-600: #{$color-gamma-600};
+  --gamma-700: #{$color-gamma-700};
+  --gamma-800: #{$color-gamma-800};
+  --gamma-900: #{$color-gamma-900};
+
+  --delta-50: #{$color-delta-50};
+  --delta-100: #{$color-delta-100};
+  --delta-200: #{$color-delta-200};
+  --delta-300: #{$color-delta-300};
+  --delta-400: #{$color-delta-400};
+  --delta-500: #{$color-delta-500};
+  --delta-600: #{$color-delta-600};
+  --delta-700: #{$color-delta-700};
+  --delta-800: #{$color-delta-800};
+  --delta-900: #{$color-delta-900};
+
+  /* Page sizing */
+  --page-horizontal-padding: 0.5rem;
+  --main-vertical-padding: 1rem;
+  --page-max-width: 72em;
+}
+
+// Font imports
+@font-face {
+  font-family: PlayfairDisplay;
+  src: url(../fonts/PlayfairDisplay/PlayfairDisplay-variable.ttf);
+}
+
+// Global styles
+* {
+  font-family: $font-primary;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+
+  min-height: 100vh;
+
+  background: var(--color-chrome-bg);
+  color: var(--color-text);
+
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+header,
+main,
+footer {
+  padding-left: var(--page-horizontal-padding);
+  padding-right: var(--page-horizontal-padding);
+}
+
+header,
+footer {
+  background: var(--color-chrome-bg);
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+  padding-top: var(--main-vertical-padding);
+  padding-bottom: var(--main-vertical-padding);
+  background: var(--color-page-bg);
+}
+
+.main__inner {
+  width: clamp(0px, 100%, var(--page-max-width));
+  margin: 0 auto;
+}
+
+footer {
+  grid-area: footer;
+}
+
+a {
+  color: var(--black);
+}
+
+ul {
+  margin: 0;
+}

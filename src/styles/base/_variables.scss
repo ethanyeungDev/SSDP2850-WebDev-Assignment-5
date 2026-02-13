@@ -1,0 +1,96 @@
+// =============================================
+// SASS VARIABLES
+// =============================================
+
+// Colors - converted from CSS variables
+$color-primary-50: #effcf6;
+$color-primary-100: #c6f7e2;
+$color-primary-200: #8eedc7;
+$color-primary-300: #65d6ad;
+$color-primary-400: #3ebd93;
+$color-primary-500: #27ab83;
+$color-primary-600: #199473;
+$color-primary-700: #147d64;
+$color-primary-800: #0c6b58;
+$color-primary-900: #014d40;
+
+$color-secondary-50: #dceefb;
+$color-secondary-100: #b6e0fe;
+$color-secondary-200: #84c5f4;
+$color-secondary-300: #62b0e8;
+$color-secondary-400: #4098d7;
+$color-secondary-500: #2680c2;
+$color-secondary-600: #186faf;
+$color-secondary-700: #0f609b;
+$color-secondary-800: #0a558c;
+$color-secondary-900: #003e6b;
+
+$color-neutral-50: #f0f4f8;
+$color-neutral-100: #d9e2ec;
+$color-neutral-200: #bcccdc;
+$color-neutral-300: #9fb3c8;
+$color-neutral-400: #829ab1;
+$color-neutral-500: #627d98;
+$color-neutral-600: #486581;
+$color-neutral-700: #334e68;
+$color-neutral-800: #243b53;
+$color-neutral-900: #102a43;
+
+$color-gamma-50: #ffeeee;
+$color-gamma-100: #facdcd;
+$color-gamma-200: #f29b9b;
+$color-gamma-300: #e66a6a;
+$color-gamma-400: #d64545;
+$color-gamma-500: #ba2525;
+$color-gamma-600: #a61b1b;
+$color-gamma-700: #911111;
+$color-gamma-800: #780a0a;
+$color-gamma-900: #610404;
+
+$color-delta-50: #fffaeb;
+$color-delta-100: #fcefc7;
+$color-delta-200: #f8e3a3;
+$color-delta-300: #f9da8b;
+$color-delta-400: #f7d070;
+$color-delta-500: #e9b949;
+$color-delta-600: #c99a2e;
+$color-delta-700: #a27c1a;
+$color-delta-800: #7c5e10;
+$color-delta-900: #513c06;
+
+$color-beta-50: #eae2f8;
+$color-beta-100: #cfbcf2;
+$color-beta-200: #a081d9;
+$color-beta-300: #8662c7;
+$color-beta-400: #724bb7;
+$color-beta-500: #653cad;
+$color-beta-600: #51279b;
+$color-beta-700: #421987;
+$color-beta-800: #34126f;
+$color-beta-900: #240754;
+
+// Context colors
+$color-page-bg: #f0f4f8;
+$color-chrome-bg: #d9e2ec;
+$color-text: #102a43;
+$color-text-light: #627d98;
+$color-white: #f0f4f8;
+$color-black: #102a43;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-2xl: 3rem;
+
+// Typography
+$font-primary: PlayfairDisplay, Georgia, serif;
+$font-base: PlayfairDisplay, sans-serif;
+
+// Breakpoints
+$bp-sm: 40em;
+$bp-md: 52em;
+$bp-lg: 64em;
+$bp-xl: 80em;

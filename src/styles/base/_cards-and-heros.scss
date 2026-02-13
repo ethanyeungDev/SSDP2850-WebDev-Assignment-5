@@ -1,0 +1,275 @@
+// =============================================
+// PROJECT CARDS & HERO SECTIONS
+// Using Sass features: nesting, extends, mixins
+// =============================================
+
+// Hero section base styling
+.hero-section {
+  @extend %hero-background;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-2xl $spacing-md;
+  
+  @media (min-width: $bp-lg) {
+    padding: $spacing-2xl;
+  }
+
+  // Nested photo background variant
+  &--photo {
+    @include animated-gradient-bg(
+      $color-primary-500,
+      $color-secondary-500,
+      $color-beta-500
+    );
+    
+    // Content within hero
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  // Minimal background variant
+  &--minimal {
+    background: $color-white;
+    
+    &::after {
+      @include gradient-background(
+        rgba($color-primary-500, 0.1),
+        rgba($color-secondary-500, 0.1)
+      );
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+  }
+
+  // Skills section variant
+  &--skills {
+    @include gradient-background(
+      $color-secondary-100,
+      $color-secondary-50,
+      180deg
+    );
+  }
+}
+
+// Project card styling with Sass nesting
+.project-card {
+  @extend %card-base-styles;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  // Card header with background
+  &__header {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    margin: -$spacing-lg -$spacing-lg $spacing-lg -$spacing-lg;
+
+    // Primary gradient variant
+    &--primary {
+      @include gradient-background(
+        $color-primary-400,
+        $color-primary-700,
+        45deg
+      );
+    }
+
+    // Secondary gradient variant
+    &--secondary {
+      @include gradient-background(
+        $color-secondary-400,
+        $color-secondary-700,
+        135deg
+      );
+    }
+
+    // Beta (purple) gradient variant
+    &--accent {
+      @include gradient-background(
+        $color-beta-400,
+        $color-beta-700,
+        225deg
+      );
+    }
+
+    // Delta (yellow) gradient variant
+    &--highlight {
+      @include gradient-background(
+        $color-delta-300,
+        $color-delta-600,
+        315deg
+      );
+    }
+
+    // Image within header
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  // Card content section
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    > h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: $color-text;
+      line-height: 1.2;
+    }
+
+    > p {
+      color: $color-text-light;
+      line-height: 1.6;
+      flex: 1;
+    }
+  }
+
+  // Card footer with actions
+  &__footer {
+    display: flex;
+    gap: $spacing-sm;
+    margin-top: $spacing-md;
+    padding-top: $spacing-md;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+    a {
+      text-decoration: none;
+      padding: $spacing-sm $spacing-md;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: all 0.2s ease;
+
+      // Nested link styles
+      &:hover {
+        transform: translateX(2px);
+      }
+    }
+  }
+
+  // Skill badge styling
+  &--skill {
+    padding: $spacing-md;
+
+    .skill-tag {
+      display: inline-block;
+      padding: $spacing-xs $spacing-sm;
+      margin: $spacing-xs $spacing-xs $spacing-xs 0;
+      border-radius: 0.25rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+
+      // Skill category variants
+      &--tech {
+        background-color: $color-secondary-100;
+        color: $color-secondary-800;
+      }
+
+      &--design {
+        background-color: $color-beta-100;
+        color: $color-beta-800;
+      }
+
+      &--soft {
+        background-color: $color-delta-100;
+        color: $color-delta-800;
+      }
+
+      &--lang {
+        background-color: $color-primary-100;
+        color: $color-primary-800;
+      }
+    }
+  }
+}
+
+// Skills grid container
+.skills-grid {
+  display: grid;
+  gap: $spacing-lg;
+  
+  @media (min-width: $bp-sm) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  @media (min-width: $bp-lg) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+// Featured project - larger variant
+.project-featured {
+  @extend %card-base-styles;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-lg;
+
+  @media (min-width: $bp-lg) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__image {
+    @include gradient-background(
+      $color-primary-300,
+      $color-primary-600,
+      90deg
+    );
+    min-height: 300px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: $spacing-md;
+
+    h2 {
+      font-size: 2rem;
+      margin: 0;
+      color: $color-text;
+      line-height: 1.2;
+    }
+
+    p {
+      color: $color-text-light;
+      line-height: 1.6;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: $bp-md) {
+  .project-featured {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    &__header {
+      height: 150px;
+    }
+  }
+}

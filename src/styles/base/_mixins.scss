@@ -1,0 +1,100 @@
+// =============================================
+// SASS MIXINS & PLACEHOLDERS
+// =============================================
+
+// Mixin for gradient backgrounds - used for project cards
+@mixin gradient-background($color1, $color2, $angle: 135deg) {
+  background: linear-gradient(
+    $angle in lch,
+    $color1,
+    $color2
+  );
+}
+
+// Mixin for subtle animated gradient backgrounds - for hero sections
+@mixin animated-gradient-bg($color1, $color2, $color3) {
+  background: linear-gradient(
+    -45deg,
+    $color1,
+    $color2,
+    $color3
+  );
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+// Mixin for card shadows and spacing
+@mixin card-base {
+  padding: $spacing-lg;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+// Mixin for hover effects on cards
+@mixin card-hover {
+  &:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+}
+
+// Mixin for responsive padding
+@mixin responsive-padding($mobile, $tablet, $desktop) {
+  padding: $mobile;
+  
+  @media (min-width: $bp-sm) {
+    padding: $tablet;
+  }
+  
+  @media (min-width: $bp-lg) {
+    padding: $desktop;
+  }
+}
+
+// Placeholder for card styling - extends reduce repetition
+%card-base-styles {
+  @include card-base;
+  @include card-hover;
+  background-color: $color-white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+// Placeholder for hero section backgrounds
+%hero-background {
+  position: relative;
+  overflow: hidden;
+  background-attachment: fixed;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+}
+
+// Animation for gradient shift
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+// Animation for subtle fade
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
